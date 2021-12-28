@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <article class="form-background">
+        <section class="form-content">
+            <h1>Change Password</h1>
+            <p>Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it.</p>
+            <form action="{% url 'account_set_password' %}" method="POST">
+                <label for="password">New Password:</label>
+                <input type="password" name="password" id="password" placeholder="New Password">
+
+                <label for="password-again">New Password (Again):</label>
+                <input type="password" name="password-again" id="password-again" placeholder="New Password (Again)">
+
+                <button class="submit-btn">CHANGE PASSWORD</button>
+            </form>
+        </section>
+    </article>
+</body>
+</html>

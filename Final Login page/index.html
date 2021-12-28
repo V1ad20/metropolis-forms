@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="form-background">
+        <article class="form-container">
+
+            <section class="form-img-container">
+                <img src="assets/log-in.png" alt="">
+            </section>
+
+            <section class="form-content">
+                <ul class="link-navigation">
+                    <li>
+                        <a class="link-container inactive-link" href=""><span>Log In</span></a>
+                    </li>
+                    <li>
+                        <a class="link-container active-link" href=""><span>Sign Up</span></a>
+                    </li>
+                </ul>
+
+                <form action="">
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="username" class="placeholder-active">Username: </label>
+                        <input data-input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="password" class="placeholder-active">Password: </label>
+                        <input data-input type="text" id="password" name="password" required>
+                    </div>
+
+                    <div class="checkbox-input-wrapper">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">
+                            <span>Remeber Me</span>
+                            <div class="checkbox-square">
+                                <img class="checkmark" src="assets/checkmark.svg" alt="">
+                            </div>
+                        </label>
+                    </div>
+
+                    <p>By clicking this button, you agree to our <a class="forgot-password">terms</a> and <a class="forgot-password">privacy policy.</a></p>
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

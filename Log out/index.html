@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <article class="form-background">
+        <section class="form-content">
+            <h1>Log Out</h1>
+            <p>Are you sure you want to log out?</p>
+            <form action="{% url 'account_logout' %}" method="POST">
+                <button class="submit-btn">LOG OUT</button>
+            </form>
+        </section>
+    </article>
+</body>
+</html>

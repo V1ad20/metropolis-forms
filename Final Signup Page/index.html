@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="form-background">
+        <article class="form-container">
+
+            <section class="form-img-container">
+                <img src="assets/sign-up.png" alt="">
+            </section>
+
+            <section class="form-content">
+                <ul class="link-navigation">
+                    <li>
+                        <a class="link-container inactive-link" href=""><span>Log In</span></a>
+                    </li>
+                    <li>
+                        <a class="link-container active-link" href=""><span>Sign Up</span></a>
+                    </li>
+                </ul>
+
+                <form action="">
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="TDSB-email" class="placeholder-active">TDSB Email: </label>
+                        <input data-input type="text" id="TDSB-email" name="TDSB-email" required>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="username" class="placeholder-active">Username: </label>
+                        <input data-input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="first-name" class="placeholder-active">First Name: </label>
+                        <input data-input type="text" id="first-name" name="first-name" required>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="last-name" class="placeholder-active">Last Name: </label>
+                        <input data-input type="text" id="last-name" name="last-name" required>
+                    </div>
+
+                    <div class="selection-input-wrapper">
+                        <label data-placeholder for="graduating-year">Graduating Year</label>
+                        <select id="graduating-year" name="graduating-year" required>
+                            <option value="does-not-apply">Does not apply</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="password" class="placeholder-active">Password: </label>
+                        <input data-input type="text" id="password" name="password" required>
+                    </div>
+
+                    <div class="text-input-wrapper">
+                        <label data-placeholder for="password-again" class="placeholder-active">Password (Again): </label>
+                        <input data-input type="text" id="password-again" name="password-again" required>
+                    </div>
+
+                    <p>By clicking this button, you agree to our <a class="forgot-password">terms</a> and <a class="forgot-password">privacy policy.</a></p>
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

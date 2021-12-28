@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-blue: #073763;
+  --link-blue: #3a6a96;
+  --mid-blue: #6e9bc4;
+
+  /* VARIABLES FOR MOBILE - CHANGE WITH MEDIA QUERIES */
+
+  /*form-container - contains img and form*/
+  --form-container-margin-vertical: 4vw;
+  --form-container-margin-horizontal: 4vw;
+
+  /*form-content - contains just form*/
+  --form-content-padding: 3rem;
+  --form-content-flex-basis: 100%;
+
+  /*Log-in / Sign-up links*/
+  --link-navigation-min-height: 3rem;
+  --link-container-padding: 5%;
+
+  --active-link-color: var(--dark-blue);
+  --inactive-link-color: rgb(177, 177, 177);
+  --inative-link-hover-color: var(--link-blue);
+
+  --select-border-color: lightgray;
+  --select-border-color-focus: var(--link-blue);
+
+  --bs-font-sans-serif: "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 36rem) {
+  :root {
+    --form-container-margin-vertical: 3rem;
+    --form-container-margin-horizontal: 8vw;
+  }
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --form-content-flex-basis: 50%;
+  }
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  color: rgb(145, 145, 145);
+}
+
+.form-background {
+  /*change here*/
+  width: 100vw;
+  min-height: 100vh;
+
+  background-color: rgb(238, 238, 238);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-container {
+  align-self: stretch;
+
+  margin: var(--form-container-margin-vertical)
+    var(--form-container-margin-horizontal);
+
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.form-content {
+  height: fit-content;
+  flex-basis: var(--form-content-flex-basis);
+
+  padding: var(--form-content-padding);
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link-navigation {
+  width: 100%;
+  min-height: var(--link-navigation-min-height);
+
+  list-style: none;
+
+  font-weight: bolder;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.link-navigation > li {
+  min-height: 100%;
+  flex-grow: 1;
+}
+.link-container {
+  width: inherit;
+  min-height: inherit;
+
+  padding: var(--link-container-padding);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-link {
+  border-bottom: 3px solid var(--active-link-color);
+
+  text-decoration: none;
+  color: var(--active-link-color);
+}
+.inactive-link {
+  border-bottom: 3px solid var(--inactive-link-color);
+
+  text-decoration: none;
+  color: var(--inactive-link-color);
+}
+.inactive-link:hover {
+  --inactive-link-color: var(--inative-link-hover-color);
+}
+
+form > * {
+  width: 100%;
+}
+.text-input-wrapper {
+  margin-top: 2.5rem;
+
+  position: relative;
+}
+.text-input-wrapper > input {
+  width: inherit;
+  height: 3rem;
+
+  padding-bottom: 0.5rem;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  font-size: 1.1rem;
+
+  border-bottom: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+.text-input-wrapper > label {
+  position: absolute;
+  transition: bottom 0.3s, font-size 0.3s;
+}
+.text-input-wrapper > label::selection {
+  background: none;
+}
+.text-input-wrapper > label:hover {
+  cursor: text;
+}
+.placeholder-active {
+  bottom: 1rem;
+  font-size: 1rem;
+}
+.placeholder-inactive {
+  bottom: 3rem;
+  font-size: 0.8rem;
+}
+
+.text-input-wrapper > input:focus {
+  margin-top: -1px;
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+.selection-input-wrapper {
+  margin: 3rem 0 2rem 0;
+}
+.selection-input-wrapper > label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.selection-input-wrapper > select {
+  width: inherit;
+  padding: 0.5rem;
+
+  outline: none;
+  border: none;
+  outline: 2px solid var(--select-border-color);
+  border-radius: 0.2rem;
+
+  transition: outline-color 0.5s;
+
+  font-size: 1rem;
+}
+.selection-input-wrapper > select:focus {
+  outline-color: var(--select-border-color-focus);
+}
+
+p {
+  margin: 2rem 0 1rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+
+  background-color: var(--mid-blue);
+
+  border: none;
+  border-radius: 0.2rem;
+
+  box-shadow: 0 3px 5px gray;
+
+  transition: background-color 0.2s;
+
+  font-size: 1rem;
+  color: white;
+}
+.submit-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.forgot-password {
+  text-decoration: none;
+
+  color: var(--link-blue);
+}
+
+.forgot-password:hover {
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.form-img-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: var(--form-content-flex-basis);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img {
+  height: calc(var(--form-content-height) + 2 * var(--form-content-margin));
+
+  object-fit: contain;
+
+  display: block;
+}
